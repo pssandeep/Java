@@ -49,7 +49,7 @@ public class DateTest {
 		dfa[6] = DateFormat.getTimeInstance();
 
 		for (DateFormat df : dfa)
-			System.out.println(df.format(d5));
+			System.out.println(df.format(df));
 
 //		Parse Function
 		System.out.println("-----Parse Func-----");
