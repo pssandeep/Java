@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://www.bottomline.com/webseries/schema/is/message/account/maint/v1" xmlns:v11="http://www.bottomline.com/webseries/schema/ps/message/common/v1" xmlns:v12="http://www.bottomline.com/webseries/schema/ps/platform/authentication/v1" xmlns:v13="http://www.bottomline.com/webseries/schema/ps/platform/common/v1" xmlns:v14="http://www.bottomline.com/webseries/schema/ps/platform/entitlements/v1" xmlns:v15="http://www.bottomline.com/webseries/schema/ps/platform/account/v1">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<v1:addAccountRequest>
+			<v1:requestHeader>
+				<v11:requestId>2</v11:requestId>
+				<!--Optional:-->
+				<v11:requestUser>
+					<v12:userId>PB1</v12:userId>
+					<v12:data>
+						<!--Zero or more repetitions:-->
+						<v13:item>
+							<v13:name>USERGROUP</v13:name>
+							<v13:value>CBAO</v13:value>
+						</v13:item>
+					</v12:data>
+				</v11:requestUser>
+			</v1:requestHeader>
+			<v1:account v14:provisioningAction="A" v14:roleId="1">
+				<v15:accountNumber>1000000023</v15:accountNumber>
+				<v15:bankCode>BONY</v15:bankCode>
+				<!--Optional:-->
+				<v15:userGroupId>PBUCE35</v15:userGroupId>
+				<!--Optional:-->
+				<v15:accountName>Acct Name 23</v15:accountName>
+				<v15:hostKey>ACC H K 18</v15:hostKey>
+				<!--Optional:-->
+				<v15:clientAccountName>Client Acct Name 23</v15:clientAccountName>
+				<!--Optional:-->
+				<v15:currencyCode>GBP</v15:currencyCode>
+				<v15:accountType>CL</v15:accountType>
+				<v15:accountSubType>CL</v15:accountSubType>
+				<!--Optional:-->
+				<v15:bankName>Bank of New York</v15:bankName>
+				<!--Optional:-->
+				<v15:ABA>021000018</v15:ABA>
+				<!--Optional:-->
+				<v13:address1>Address Line 1 23</v13:address1>
+				<!--Optional:-->
+				<v13:address2>Address Line 2 23</v13:address2>
+				<!--Optional:-->
+				<v13:address3>Address Line 3 23</v13:address3>
+				<!--Optional:-->
+				<v13:city>New York</v13:city>
+				<!--Optional:-->
+				<v13:state>NY</v13:state>
+				<!--Optional:-->
+				<v13:postalCode>11223</v13:postalCode>
+				<!--Optional:-->
+				<v13:countryCode>GB</v13:countryCode>
+				<!--Optional:-->
+				<v15:status>EN</v15:status>
+				<!--Optional:-->
+				<v15:tranType>DR</v15:tranType>
+				<!--Optional:-->
+				<v15:imageAccount>true</v15:imageAccount>
+				<!--Optional:-->
+				<v15:realTimeAccount>true</v15:realTimeAccount>
+				<v15:realTimePostedTransactions>false</v15:realTimePostedTransactions>
+				<!--Zero or more repetitions:-->
+				<v15:fundingMethod>NA</v15:fundingMethod>
+				<v15:transactionTypes v14:provisioningAction="A">
+					<v14:productCode>_CLFLDS</v14:productCode>
+					<!--Zero or more repetitions:-->
+					<v14:transactionTypes v14:provisioningAction="A">
+						<v13:productCode>_CLFLDS</v13:productCode>
+						<v13:functionCode>*</v13:functionCode>
+						<v13:typeCode>*</v13:typeCode>
+					</v14:transactionTypes>
+				</v15:transactionTypes>
+				<v15:productSettings>
+					<v13:productCode>_CLFLDS</v13:productCode>
+					<v13:settings>
+						<v13:name>CDAIndicator</v13:name>
+						<v13:value>1</v13:value>
+					</v13:settings>
+	                    <v13:settings>
+	                       <v13:name>ACCOUNTID</v13:name>
+	                       <v13:value>123</v13:value>
+	                    </v13:settings>
+	                    <v13:settings>
+	                       <v13:name>COMPANYNUMBER</v13:name>
+	                       <v13:value>321</v13:value>
+	                    </v13:settings>
+				</v15:productSettings>
+			</v1:account>
+		</v1:addAccountRequest>
+	</soapenv:Body>
+</soapenv:Envelope>
